@@ -1,0 +1,3 @@
+.chc-pipeline/
+__pycache__/
+*.pyc

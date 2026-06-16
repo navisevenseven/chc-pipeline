@@ -1,0 +1,125 @@
+{
+  "default_project": "chc-browser",
+  "projects": {
+    "chc-browser": {
+      "repo_env": "CHC_BROWSER_REPO",
+      "linear_team_id": "1399ce8c-f5b0-4a0f-9a83-ffc419c676e5",
+      "linear_state_ids": {
+        "todo": "4a24b59f-6326-41b5-9cfa-ad14371672d0",
+        "in_progress": "4f53d112-378b-470d-b02e-94de62c38760",
+        "review": "b3e6e384-2fdd-4ee1-ba56-17946424b0a1",
+        "blocked": "6681f7ea-b4b1-4037-9482-d10761cec4b1"
+      },
+      "linear_project_substring": "browser",
+      "base_branch": "main",
+      "memory_project": "chc-browser",
+      "prompt_label": "CHC Browser",
+      "remote_only_issues": [
+        "CHC-698",
+        "CHC-699",
+        "CHC-701",
+        "CHC-703",
+        "CHC-705",
+        "CHC-706",
+        "CHC-707",
+        "CHC-708",
+        "CHC-709",
+        "CHC-710",
+        "CHC-711",
+        "CHC-721",
+        "CHC-722",
+        "CHC-723",
+        "CHC-724",
+        "CHC-725",
+        "CHC-727",
+        "CHC-728",
+        "CHC-729",
+        "CHC-730",
+        "CHC-731",
+        "CHC-733",
+        "CHC-735",
+        "CHC-738",
+        "CHC-739",
+        "CHC-740",
+        "CHC-741",
+        "CHC-742",
+        "CHC-743",
+        "CHC-744",
+        "CHC-745",
+        "CHC-746",
+        "CHC-747"
+      ],
+      "remote_blocker_template": "{identifier} — remote-only задача по CHC-702. Локальный orchestrate.py не должен запускать её в обычном worktree, потому что для неё нужен реальный Chromium checkout / remote build host / runtime evidence. Настрой remote executor для этой задачи или запусти её на remote build host.",
+      "backlog_filter": {
+        "title_regex": "^M(\\d+)\\.(\\d+)\\b",
+        "phase_lt": 9,
+        "exclude_ids": ["CHC-702", "CHC-760"],
+        "exclude_title_markers": [
+          "coordination only",
+          "read me first",
+          "pre-req",
+          "optional",
+          "опционально"
+        ]
+      }
+    },
+    "dualipay-ledger": {
+      "repo_env": "DUALIPAY_LEDGER_REPO",
+      "linear_team_id": "1399ce8c-f5b0-4a0f-9a83-ffc419c676e5",
+      "linear_state_ids": {
+        "todo": "4a24b59f-6326-41b5-9cfa-ad14371672d0",
+        "in_progress": "4f53d112-378b-470d-b02e-94de62c38760",
+        "review": "b3e6e384-2fdd-4ee1-ba56-17946424b0a1",
+        "blocked": "6681f7ea-b4b1-4037-9482-d10761cec4b1"
+      },
+      "linear_project_substring": "ledger",
+      "base_branch": "main",
+      "memory_project": "dualipay",
+      "prompt_label": "DualiPay Ledger Service"
+    },
+    "dualipay-mate": {
+      "repo_env": "DUALIPAY_MATE_REPO",
+      "linear_team_id": "1399ce8c-f5b0-4a0f-9a83-ffc419c676e5",
+      "linear_state_ids": {
+        "todo": "4a24b59f-6326-41b5-9cfa-ad14371672d0",
+        "in_progress": "4f53d112-378b-470d-b02e-94de62c38760",
+        "review": "b3e6e384-2fdd-4ee1-ba56-17946424b0a1",
+        "blocked": "6681f7ea-b4b1-4037-9482-d10761cec4b1"
+      },
+      "linear_project_substring": "Mate",
+      "base_branch": "main",
+      "memory_project": "dualipay",
+      "prompt_label": "DualiPay Mate"
+    },
+    "chc-browser-ios": {
+      "repo_env": "CHC_BROWSER_IOS_REPO",
+      "linear_team_id": "ecaa5293-61a0-4cd3-b608-d704a4ef3ad5",
+      "linear_state_ids": {
+        "todo": "94a1c351-7e61-4009-9e8a-7de90b934a33",
+        "in_progress": "ebc7e8ad-aed4-4550-956e-e482a01860a9",
+        "review": "4711a8e5-34e2-4ef3-a31b-fede89ff6527",
+        "blocked": "483439f7-d532-4247-9572-e8def4b4a321"
+      },
+      "linear_project_substring": "iOS (CHC Browser)",
+      "base_branch": "main",
+      "memory_project": "chc-browser",
+      "prompt_label": "CHC Browser iOS"
+    },
+    "chc-browser-android": {
+      "repo_env": "CHC_BROWSER_ANDROID_REPO",
+      "linear_team_id": "ecaa5293-61a0-4cd3-b608-d704a4ef3ad5",
+      "linear_state_ids": {
+        "todo": "94a1c351-7e61-4009-9e8a-7de90b934a33",
+        "in_progress": "ebc7e8ad-aed4-4550-956e-e482a01860a9",
+        "review": "4711a8e5-34e2-4ef3-a31b-fede89ff6527",
+        "blocked": "483439f7-d532-4247-9572-e8def4b4a321"
+      },
+      "linear_project_substring": "Android (CHC Browser)",
+      "base_branch": "codex/chcb-2-redesign-ui",
+      "memory_project": "chc-browser",
+      "prompt_label": "CHC Browser Android (Chromium fork)",
+      "remote_only_issues": ["CHCB-200"],
+      "remote_blocker_template": "{identifier} — задача требует полной Chromium Android сборки и физического Android-девайса. Локальный orchestrate.py не может это сделать. Запусти задачу на build-host root@80.89.237.93 (см. memory reference_chc_browser_build_host)."
+    }
+  }
+}
